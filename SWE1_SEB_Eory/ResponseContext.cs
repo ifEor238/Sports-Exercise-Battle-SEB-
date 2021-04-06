@@ -595,7 +595,7 @@ namespace SWE1_SEB_Eory
 
                 cmd.ExecuteNonQuery();
 
-                Thread.Sleep(10000);
+                Thread.Sleep(120000);
 
                 var cmd2 = new NpgsqlCommand("SELECT username, count, duration FROM tournplayers WHERE tournid = (SELECT tournid FROM tournament WHERE running = 'true')", conn);
                 cmd2.Prepare();
