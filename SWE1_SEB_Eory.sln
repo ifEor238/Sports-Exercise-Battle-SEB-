@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWE1_SEB_Eory", "SWE1_SEB_Eory\SWE1_SEB_Eory.csproj", "{EDC30EC3-113C-4265-9DFA-CC5F8EEC6072}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWE1_SEB_Eory.Test", "SWE1_SEB_Eory.Test\SWE1_SEB_Eory.Test.csproj", "{53CE0395-54FB-4FE0-92B6-9E90337EF898}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EDC30EC3-113C-4265-9DFA-CC5F8EEC6072} = {EDC30EC3-113C-4265-9DFA-CC5F8EEC6072}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDC30EC3-113C-4265-9DFA-CC5F8EEC6072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC30EC3-113C-4265-9DFA-CC5F8EEC6072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC30EC3-113C-4265-9DFA-CC5F8EEC6072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC30EC3-113C-4265-9DFA-CC5F8EEC6072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53CE0395-54FB-4FE0-92B6-9E90337EF898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53CE0395-54FB-4FE0-92B6-9E90337EF898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53CE0395-54FB-4FE0-92B6-9E90337EF898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53CE0395-54FB-4FE0-92B6-9E90337EF898}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B5DBAC1-D174-4D45-848D-5B5147016325}
+	EndGlobalSection
+EndGlobal

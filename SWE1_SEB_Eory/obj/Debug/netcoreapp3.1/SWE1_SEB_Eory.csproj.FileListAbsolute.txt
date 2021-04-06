@@ -1,0 +1,13 @@
+H:\SWEProject2\SWE1_SEB_Eory\SWE1_SEB_Eory\bin\Debug\netcoreapp3.1\SWE1_SEB_Eory.exe
+H:\SWEProject2\SWE1_SEB_Eory\SWE1_SEB_Eory\bin\Debug\netcoreapp3.1\SWE1_SEB_Eory.deps.json
+H:\SWEProject2\SWE1_SEB_Eory\SWE1_SEB_Eory\bin\Debug\netcoreapp3.1\SWE1_SEB_Eory.runtimeconfig.json
+H:\SWEProject2\SWE1_SEB_Eory\SWE1_SEB_Eory\bin\Debug\netcoreapp3.1\SWE1_SEB_Eory.runtimeconfig.dev.json
+H:\SWEProject2\SWE1_SEB_Eory\SWE1_SEB_Eory\bin\Debug\netcoreapp3.1\SWE1_SEB_Eory.dll
+H:\SWEProject2\SWE1_SEB_Eory\SWE1_SEB_Eory\bin\Debug\netcoreapp3.1\SWE1_SEB_Eory.pdb
+H:\SWEProject2\SWE1_SEB_Eory\SWE1_SEB_Eory\obj\Debug\netcoreapp3.1\SWE1_SEB_Eory.AssemblyInfoInputs.cache
+H:\SWEProject2\SWE1_SEB_Eory\SWE1_SEB_Eory\obj\Debug\netcoreapp3.1\SWE1_SEB_Eory.AssemblyInfo.cs
+H:\SWEProject2\SWE1_SEB_Eory\SWE1_SEB_Eory\obj\Debug\netcoreapp3.1\SWE1_SEB_Eory.dll
+H:\SWEProject2\SWE1_SEB_Eory\SWE1_SEB_Eory\obj\Debug\netcoreapp3.1\SWE1_SEB_Eory.pdb
+H:\SWEProject2\SWE1_SEB_Eory\SWE1_SEB_Eory\bin\Debug\netcoreapp3.1\Npgsql.dll
+H:\SWEProject2\SWE1_SEB_Eory\SWE1_SEB_Eory\obj\Debug\netcoreapp3.1\SWE1_SEB_Eory.csproj.CopyComplete
+H:\SWEProject2\SWE1_SEB_Eory\SWE1_SEB_Eory\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
