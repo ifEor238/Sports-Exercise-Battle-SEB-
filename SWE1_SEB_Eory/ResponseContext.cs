@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using Npgsql;
 using System;
 using System.Collections.Generic;
@@ -645,24 +645,39 @@ namespace SWE1_SEB_Eory
 
                     cmdupd.ExecuteNonQuery();
 
-                    var cmdupd2 = new NpgsqlCommand("UPDATE users SET elo = @newelo WHERE username != @username", conn);
-                    cmdupd2.Parameters.AddWithValue("username", tourn.winner.Name);
-                    cmdupd2.Parameters.AddWithValue("newelo", (currELO - 1));
-                    cmdupd2.Prepare();
+                    var cmdEndSel2 = new NpgsqlCommand("SELECT elo, totalcount FROM users WHERE username != @username", conn);
+                    cmdEndSel2.Parameters.AddWithValue("username", tourn.winner.Name);
+                    cmdEndSel2.Prepare();
 
-                    cmdupd2.ExecuteNonQuery();
+                    var readerEndSel2 = cmdEndSel2.ExecuteReader();
+                    if (readerEndSel2.HasRows)
+                    {
+                        while (readerEndSel2.Read())
+                        {
+                            currELO = Int32.Parse((readerInit[0] == DBNull.Value) ? string.Empty : (string)readerInit[0]);
+                            currTotal = Int32.Parse((readerInit[1] == DBNull.Value) ? string.Empty : (string)readerInit[1]);
+                        }
+                        readerEndSel2.Close();
 
-                    tourn.cleanTournament();
+                        var cmdupd2 = new NpgsqlCommand("UPDATE users SET elo = @newelo WHERE username != @username", conn);
+                        cmdupd2.Parameters.AddWithValue("username", tourn.winner.Name);
+                        cmdupd2.Parameters.AddWithValue("newelo", (currELO - 1));
+                        cmdupd2.Prepare();
+
+                        cmdupd2.ExecuteNonQuery();
+
+                        tourn.cleanTournament();
 
 
 
-                    var cmd3 = new NpgsqlCommand("UPDATE tournament SET running = 'false' WHERE starttime = @start", conn);
-                    cmd3.Parameters.AddWithValue("start", starttime);
-                    cmd3.Prepare();
+                        var cmd3 = new NpgsqlCommand("UPDATE tournament SET running = 'false' WHERE starttime = @start", conn);
+                        cmd3.Parameters.AddWithValue("start", starttime);
+                        cmd3.Prepare();
 
-                    cmd3.ExecuteNonQuery();
+                        cmd3.ExecuteNonQuery();
+                    }
+
                 }
-
             }
         }
 
