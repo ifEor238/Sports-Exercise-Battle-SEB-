@@ -149,7 +149,7 @@ echo.
 
 REM --------------------------------------------------
 echo 15) sleep of 2min (afterwards the tournament should be over and elo values need to be updated)
-ping localhost -n 15 >NUL 2>NUL
+ping localhost -n 120 >NUL 2>NUL
 echo.
 echo.
 
