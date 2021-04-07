@@ -1,4 +1,4 @@
-﻿using SWE1_SEB_Eory;
+using SWE1_SEB_Eory;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -11,22 +11,17 @@ namespace SWE1_SEB_Eory
 {
     class Program
     {
+        static SemaphoreSlim Threads = new SemaphoreSlim(3);
         static void Main(string[] args)
         {
             TcpListener listener = new TcpListener(IPAddress.Loopback, 10001);
-            listener.Start(5);
+            listener.Start(3);
             var tasks = new List<Task>();
 
             while (true)
             {
-                try
-                {
+                    Threads.Wait();
                     tasks.Add(Task.Run(() => AddConnection(listener)));
-                }
-                catch (Exception exc)
-                {
-                    Console.WriteLine(exc.Message);
-                }
             }
         }
         private static void AddConnection(TcpListener listener)
@@ -35,6 +30,7 @@ namespace SWE1_SEB_Eory
             var socket = listener.AcceptTcpClient();
             var message = new HTTPmessage(socket, reqList);
             socket.Close();
+            Threads.Release();
         }
     }
 }
